@@ -20,10 +20,9 @@ pipeline {
 
         stage('Run Python tests') {
             steps {
-                dir('python-app') {
-                    bat 'python -m unittest -v'
-                }
-            }
+                    bat '"C:\Users\DELL\AppData\Local\Programs\Python\Python312\python.exe" -m unittest -v'
+                 }
+             }
         }
     }
 
