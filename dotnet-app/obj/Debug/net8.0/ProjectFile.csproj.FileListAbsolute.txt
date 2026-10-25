@@ -1,0 +1,11 @@
+C:\Users\DELL\TP3-DevOps\dotnet-app\obj\Debug\net8.0\ProjectFile.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL\TP3-DevOps\dotnet-app\obj\Debug\net8.0\ProjectFile.AssemblyInfoInputs.cache
+C:\Users\DELL\TP3-DevOps\dotnet-app\obj\Debug\net8.0\ProjectFile.AssemblyInfo.cs
+C:\Users\DELL\TP3-DevOps\dotnet-app\obj\Debug\net8.0\ProjectFile.csproj.CoreCompileInputs.cache
+C:\Users\DELL\TP3-DevOps\dotnet-app\bin\Debug\net8.0\ProjectFile.deps.json
+C:\Users\DELL\TP3-DevOps\dotnet-app\bin\Debug\net8.0\ProjectFile.dll
+C:\Users\DELL\TP3-DevOps\dotnet-app\bin\Debug\net8.0\ProjectFile.pdb
+C:\Users\DELL\TP3-DevOps\dotnet-app\obj\Debug\net8.0\ProjectFile.dll
+C:\Users\DELL\TP3-DevOps\dotnet-app\obj\Debug\net8.0\refint\ProjectFile.dll
+C:\Users\DELL\TP3-DevOps\dotnet-app\obj\Debug\net8.0\ProjectFile.pdb
+C:\Users\DELL\TP3-DevOps\dotnet-app\obj\Debug\net8.0\ref\ProjectFile.dll
