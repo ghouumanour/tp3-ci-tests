@@ -21,5 +21,15 @@ jobs:
           dotnet restore dotnet-app/ProjectFile.csproj
           dotnet restore dotnet-app.Tests/ProjectFile-Tests.csproj
 
+      
       - name: Run .NET tests
-        run: dotnet test dotnet-app.Tests/ProjectFile-Tests.csproj --logger "console;verbosity=detailed"
+        run: dotnet test dotnet-app.Tests/ProjectFile-Tests.csproj --logger "console;verbosity=detailed" --logger "trx;LogFileName=TestResults.trx"
+
+      - name: Upload test report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dotnet-test-report
+          path: dotnet-app.Tests/TestResults/TestResults.trx
+          if-no-files-found: warn
+
