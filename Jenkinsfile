@@ -19,7 +19,22 @@ pipeline {
         stage('Run Python tests') {
             steps {
                 dir('python-app') {
-                    bat '"C:/Users/DELL/AppData/Local/Programs/Python/Python312/python.exe" -m unittest -v test_math_utils'
+                    bat '''
+                        echo ===== Current directory =====
+                        cd
+
+                        echo ===== Python version =====
+                        "C:/Users/DELL/AppData/Local/Programs/Python/Python312/python.exe" --version
+
+                        echo ===== Files =====
+                        dir
+
+                        echo ===== Test file =====
+                        type test_math_utils.py
+
+                        echo ===== Running Python tests =====
+                        "C:/Users/DELL/AppData/Local/Programs/Python/Python312/python.exe" -m unittest -v test_math_utils
+                    '''
                 }
             }
         }
