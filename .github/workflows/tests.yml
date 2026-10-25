@@ -1,0 +1,25 @@
+
+name: Run Tests
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  test-dotnet:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore dependencies
+        run: |
+          dotnet restore dotnet-app/ProjectFile.csproj
+          dotnet restore dotnet-app.Tests/ProjectFile-Tests.csproj
+
+      - name: Run .NET tests
+        run: dotnet test dotnet-app.Tests/ProjectFile-Tests.csproj
