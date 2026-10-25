@@ -10,13 +10,15 @@ pipeline {
             }
         }
 
-        stage('Run .NET tests') {
-            steps {
-                dir('dotnet-app.Tests') {
-                    bat '"C:\\Program Files\\dotnet\\dotnet.exe" test ProjectFile-Tests.csproj'
-                }
-            }
+        
+    stage('Run Python tests') {
+         steps {
+             dir('python-app') {
+                   bat                  '"C:/Users/DELL/AppData/Local/Programs/Python/Python312/python.exe" -m unittest -    v test_math_utils'
         }
+    }
+}
+
 
         
          stage('Run Python tests') {
