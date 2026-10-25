@@ -22,4 +22,4 @@ jobs:
           dotnet restore dotnet-app.Tests/ProjectFile-Tests.csproj
 
       - name: Run .NET tests
-        run: dotnet test dotnet-app.Tests/ProjectFile-Tests.csproj
+        run: dotnet test dotnet-app.Tests/ProjectFile-Tests.csproj --logger "console;verbosity=detailed"
