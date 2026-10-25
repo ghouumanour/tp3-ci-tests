@@ -10,25 +10,20 @@ pipeline {
             }
         }
 
-        
-    stage('Run Python tests') {
-         steps {
-             dir('python-app') {
-                   bat                  '"C:/Users/DELL/AppData/Local/Programs/Python/Python312/python.exe" -m unittest -    v test_math_utils'
+        stage('Run .NET tests') {
+            steps {
+                bat 'dotnet test dotnet-app.Tests/ProjectFile-Tests.csproj --logger "console;verbosity=detailed"'
+            }
+        }
+
+        stage('Run Python tests') {
+            steps {
+                dir('python-app') {
+                    bat '"C:/Users/DELL/AppData/Local/Programs/Python/Python312/python.exe" -m unittest -v test_math_utils'
+                }
+            }
         }
     }
-}
-
-
-        
-         stage('Run Python tests') {
-             steps {
-                 bat '"C:/Users/DELL/AppData/Local/Programs/Python/Python312/python.exe" -m unittest -v'
-                  
-                  }
-             }
-
-         }
 
     post {
         always {
