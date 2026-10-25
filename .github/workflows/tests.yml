@@ -34,17 +34,18 @@ jobs:
           if-no-files-found: warn
 
   
-  test-python:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      - name: Run Python Tests
+  
+      - name: Run Python Tests and Generate XML Report
         run: |
           cd python-app
-          python -m unittest -v
+          python -m pip install unittest-xml-reporting
+          python test_math_utils.py
+
+      - name: Upload Python Test Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: python-test-report
+          path: python-app/test-reports
+          if-no-files-found: warn
+
