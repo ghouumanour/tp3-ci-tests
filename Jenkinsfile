@@ -18,13 +18,15 @@ pipeline {
             }
         }
 
-        stage('Run Python tests') {
-            steps {
-                    bat '"C:\Users\DELL\AppData\Local\Programs\Python\Python312\python.exe" -m unittest -v'
-                 }
+        
+         stage('Run Python tests') {
+             steps {
+                 bat '"C:/Users/DELL/AppData/Local/Programs/Python/Python312/python.exe" -m unittest -v'
+                  
+                  }
              }
-        }
-    }
+
+         }
 
     post {
         always {
